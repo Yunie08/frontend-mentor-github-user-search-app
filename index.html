@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/light.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <p class="header__logo">devfinder</p>
+
+      <!-- Light mode button -->
+      <button class="color-mode__btn light--hidden" id="button-light" aria-label="Toggle light mode">Light
+        <img class="color-mode__icon color-mode__icon--light"  src="./assets/icon-sun.svg" alt="Sun" aria-hidden="true"/>
+      </button>
+
+      <!-- Dark mode button -->
+      <button class="color-mode__btn dark--hidden" id="button-dark" aria-label="Toggle dark mode">Dark
+        <img class=" color-mode__icon color-mode__icon--dark" src="./assets/icon-moon.svg" alt="Moon" aria-hidden="true"/>
+      </button>
+    </header>
+
+
+    <!-- Searchbar -->
+    <form class="search-bar">
+      <img class='search-bar__icon' src="./assets/icon-search.svg" alt="Search icon">
+      <label class="sr-only" for="gitUsername">Search GitHub username</label>
+      <input type="text" class="search-bar__input" name="gitUsername" id="gitUsername" placeholder="Search GitHub username...">
+      <button class="search-bar__button" type="submit">Search</button>
+    </form>
+
+
+    <!-- User infos -->
+    <main class="user-info">
+
+        <img class="user-info__img" src="./assets/profile.jpg" alt="Profile picture">
+
+      <!-- User infos - header -->
+      <div class="user-info__header">
+        <div class="user-info__id">
+          <h1 class="user-info__name">The Octocat</h1>
+          <h2 class="user-info__pseudo">@octocat</h2>
+        </div>
+        <p class="user-info__date">Joined <span>25 Jan 2011</span></p>
+      </div>
+
+      <!-- User infos - details -->
+      <div class="user-info__main">
+
+        <!-- User infos - details - description -->
+        <p class="user-info__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+
+        <!-- User infos - details - statistics -->
+        <div class="user-info__stats">
+          <div class="user-info__stats__item">
+            <h3 class="user-info__stats__title" id="repos">Repos</h3>
+            <p class="user-info__stats__data">8</p>
+          </div>
+
+          <div class="user-info__stats__item">
+            <h3 class="user-info__stats__title" id="followers">Followers</h3>
+            <p class="user-info__stats__data">3938</p>
+          </div>
+          <div class="user-info__stats__item">
+            <h3 class="user-info__stats__title" id="following">Following</h3>
+            <p class="user-info__stats__data">9</p>
+          </div>
+        </div>
+
+        <!-- User infos - details - Location & links-->
+        <div class="user-infos__links">
+
+          <div class="user-infos__links__item">
+            <img class="user-infos__links__icon" src="./assets/icon-location.svg" alt="Location icon">
+            <p class="user-infos__links__text">San Francisco</p>
+          </div>
+
+          <div class="user-infos__links__item">
+            <img class="user-infos__links__icon" src="./assets/icon-website.svg" alt="Link icon">
+            <a class="user-infos__links__text" aria-label="Link to user website" href="http://github.blog">http://github.blog</a>
+          </div>
+
+          <div class="user-infos__links__item not-available">
+            <img class="user-infos__links__icon" src="./assets/icon-twitter.svg" alt="Twitter logo">
+            <p class="user-infos__links__text" aria-label="Link to user's Twitter">Not available</p>
+          </div>
+          
+          
+          
+          <div class="user-infos__links__item">
+            <img class="user-infos__links__icon" src="./assets//icon-company.svg" alt="Company icon">
+            <a class="user-infos__links__text" aria-label="Link to user company's website" href="http://github.blog">@github</a>
+          </div>
+        
+        </div>
+
+      </div>
+    
+    </main>
+  </div>
+</body>
+</html>

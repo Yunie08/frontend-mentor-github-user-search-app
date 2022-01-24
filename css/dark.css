@@ -1,0 +1,11 @@
+/* Color palette - dark mode */
+:root {
+
+  --color-text-main: #FFFFFF ;
+  --color-text-secondary: #FFFFFF ;
+  --color-h1-stats: #FFFFFF;
+  --color-background-main: #1E2A47;
+  --color-background-secondary: #141D2F;
+  --color-logo-mode-hover: #90A4D4;
+  --color-input: #FFFFFF;
+}

@@ -1,0 +1,10 @@
+/* Color palette - light mode */
+:root {
+  --color-text-main: #4B6A9B ;
+  --color-text-secondary: #697C9A ;
+  --color-h1-stats: #2B3442;
+  --color-background-main: #FEFEFE;
+  --color-background-secondary: #F6F8FF;
+  --color-logo-mode-hover: #222731;
+  --color-input: #222731;
+}
