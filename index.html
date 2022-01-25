@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,12 +19,12 @@
       <p class="header__logo">devfinder</p>
 
       <!-- Light mode button -->
-      <button class="color-mode__btn light--hidden" id="button-light" aria-label="Toggle light mode">Light
+      <button class="color-mode__btn color-mode__btn--light" id="button-light" aria-label="Toggle light mode">Light
         <img class="color-mode__icon color-mode__icon--light"  src="./assets/icon-sun.svg" alt="Sun" aria-hidden="true"/>
       </button>
 
       <!-- Dark mode button -->
-      <button class="color-mode__btn dark--hidden" id="button-dark" aria-label="Toggle dark mode">Dark
+      <button class="color-mode__btn color-mode__btn--dark" id="button-dark" aria-label="Toggle dark mode">Dark
         <img class=" color-mode__icon color-mode__icon--dark" src="./assets/icon-moon.svg" alt="Moon" aria-hidden="true"/>
       </button>
     </header>
@@ -42,7 +42,7 @@
     <!-- User infos -->
     <main class="user-info">
 
-        <img class="user-info__img" src="./assets/profile.jpg" alt="Profile picture">
+      <img class="user-info__img" src="./assets/profile.jpg" alt="Profile picture">
 
       <!-- User infos - header -->
       <div class="user-info__header">
@@ -93,9 +93,7 @@
             <img class="user-infos__links__icon" src="./assets/icon-twitter.svg" alt="Twitter logo">
             <p class="user-infos__links__text" aria-label="Link to user's Twitter">Not available</p>
           </div>
-          
-          
-          
+                    
           <div class="user-infos__links__item">
             <img class="user-infos__links__icon" src="./assets//icon-company.svg" alt="Company icon">
             <a class="user-infos__links__text" aria-label="Link to user company's website" href="http://github.blog">@github</a>
@@ -108,4 +106,5 @@
     </main>
   </div>
 </body>
+<script src="./colorMode.js"></script>
 </html>
