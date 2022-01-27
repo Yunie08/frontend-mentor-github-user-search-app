@@ -31,72 +31,73 @@
 
 
     <!-- Searchbar -->
-    <form class="search-bar">
+    <form class="search-bar" id="form">
       <img class='search-bar__icon' src="./assets/icon-search.svg" alt="Search icon">
       <label class="sr-only" for="gitUsername">Search GitHub username</label>
       <input type="text" class="search-bar__input" name="gitUsername" id="gitUsername" placeholder="Search GitHub username...">
-      <button class="search-bar__button" type="submit">Search</button>
+      <div class="error hidden">No results</div>
+      <button class="search-bar__button" type="submit" id="submit">Search</button>
     </form>
 
 
     <!-- User infos -->
     <main class="user-info">
 
-      <img class="user-info__img" src="./assets/profile.jpg" alt="Profile picture">
+      <img id="userPic" class="user-info__img" src="./assets/emptypic.png" alt="Profile picture">
 
       <!-- User infos - header -->
       <div class="user-info__header">
         <div class="user-info__id">
-          <h1 class="user-info__name">The Octocat</h1>
-          <h2 class="user-info__pseudo">@octocat</h2>
+          <h1 class="user-info__name"></h1>
+          <h2 class="user-info__pseudo"></h2>
         </div>
-        <p class="user-info__date">Joined <span>25 Jan 2011</span></p>
+        <p class="user-info__date">Joined<span id="date"></span></p>
       </div>
 
       <!-- User infos - details -->
       <div class="user-info__main">
 
         <!-- User infos - details - description -->
-        <p class="user-info__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+        <p class="user-info__description"></p>
 
         <!-- User infos - details - statistics -->
         <div class="user-info__stats">
           <div class="user-info__stats__item">
-            <h3 class="user-info__stats__title" id="repos">Repos</h3>
-            <p class="user-info__stats__data">8</p>
+            <h3 class="user-info__stats__title">Repos</h3>
+            <p class="user-info__stats__data" id="repos"></p>
           </div>
 
           <div class="user-info__stats__item">
-            <h3 class="user-info__stats__title" id="followers">Followers</h3>
-            <p class="user-info__stats__data">3938</p>
+            <h3 class="user-info__stats__title">Followers</h3>
+            <p class="user-info__stats__data" id="followers"></p>
           </div>
           <div class="user-info__stats__item">
-            <h3 class="user-info__stats__title" id="following">Following</h3>
-            <p class="user-info__stats__data">9</p>
+            <h3 class="user-info__stats__title">Following</h3>
+            <p class="user-info__stats__data" id="following"></p>
           </div>
         </div>
 
         <!-- User infos - details - Location & links-->
         <div class="user-infos__links">
 
-          <div class="user-infos__links__item">
+          <div class="user-infos__links__item" id="locationContainer">
             <img class="user-infos__links__icon" src="./assets/icon-location.svg" alt="Location icon">
-            <p class="user-infos__links__text">San Francisco</p>
+            <p class="user-infos__links__text" id="location"></p>
           </div>
 
-          <div class="user-infos__links__item">
+          <div class="user-infos__links__item" id="websiteContainer">
             <img class="user-infos__links__icon" src="./assets/icon-website.svg" alt="Link icon">
-            <a class="user-infos__links__text" aria-label="Link to user website" href="http://github.blog">http://github.blog</a>
+            <!-- <a class="user-infos__links__text" aria-label="Link to user website" href="http://github.blog" id="website">http://github.blog</a> -->
           </div>
 
-          <div class="user-infos__links__item not-available">
+          <div class="user-infos__links__item" id="twitterContainer">
             <img class="user-infos__links__icon" src="./assets/icon-twitter.svg" alt="Twitter logo">
-            <p class="user-infos__links__text" aria-label="Link to user's Twitter">Not available</p>
+            <!-- <p class="user-infos__links__text" aria-label="Link to user's Twitter" id="twitter">Not available</p> -->
           </div>
                     
-          <div class="user-infos__links__item">
+          <div class="user-infos__links__item" id="companyContainer">
             <img class="user-infos__links__icon" src="./assets//icon-company.svg" alt="Company icon">
-            <a class="user-infos__links__text" aria-label="Link to user company's website" href="http://github.blog">@github</a>
+            <!-- <a class="user-infos__links__text" aria-label="Link to user company's website" href="http://github.blog" id="company">@github</a> -->
           </div>
         
         </div>
@@ -107,4 +108,5 @@
   </div>
 </body>
 <script src="./colorMode.js"></script>
+<script src="./script.js"></script>
 </html>

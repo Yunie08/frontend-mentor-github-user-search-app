@@ -288,6 +288,17 @@ button {
   transition: opacity 150ms;
 }
 
+.error {
+  color: var(--color-error);
+  font-size: var(--font-size-description);
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
 /********** User infos **********/
 
 
@@ -441,6 +452,10 @@ a:hover {
 
   .search-bar__button {
     min-width: 10.6rem;
+  }
+
+  .error {
+    margin-right: 2.4rem;
   }
 
   .user-info {
