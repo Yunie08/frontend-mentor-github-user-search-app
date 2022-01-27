@@ -31,10 +31,10 @@
 
 
     <!-- Searchbar -->
-    <form class="search-bar" id="form">
+    <form class="search-bar" id="form" autocomplete="off">
       <img class='search-bar__icon' src="./assets/icon-search.svg" alt="Search icon">
       <label class="sr-only" for="gitUsername">Search GitHub username</label>
-      <input type="text" class="search-bar__input" name="gitUsername" id="gitUsername" placeholder="Search GitHub username...">
+      <input type="text" class="search-bar__input" name="gitUsername" id="gitUsername" spellcheck="false" placeholder="Search GitHub username...">
       <div class="error hidden">No results</div>
       <button class="search-bar__button" type="submit" id="submit">Search</button>
     </form>
