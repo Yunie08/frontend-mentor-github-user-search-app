@@ -100,7 +100,6 @@ body {
   font-family: 'Space Mono', monospace, Arial;
   display: flex;
   justify-content: center;
-  align-items: center;
   color: var(--color-text-main);
   font-size: var(--font-size-description);
   line-height: var(--line-height-description);
@@ -157,8 +156,8 @@ button {
   display: flex;
   flex-direction: column;
   row-gap: 2.4rem;
-  margin: 0 2.4rem;
-  margin: 3.1rem 2.4rem 7.9rem 2.4rem;
+
+  margin: 3.1rem 2.4rem 0 2.4rem;
 }
 
 /********** Header **********/
@@ -428,6 +427,9 @@ a:hover {
     --picture-size: 11.7rem;
   }
 
+  body {
+    align-items: center;
+  }
   .container {
     height: 64.9rem;
     max-width: 57.3rem;
@@ -500,6 +502,8 @@ a:hover {
 
   .container {
     max-width: 73rem;
+    margin-top: 3rem;
+    margin-bottom: 5.6rem;
   }
   .user-info {
     column-gap: 3.7rem;
