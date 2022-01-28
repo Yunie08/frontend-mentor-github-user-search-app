@@ -1,3 +1,16 @@
+  // If `prefers-color-scheme` is not supported, fall back to light mode.
+  if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+    switchToLight();
+  } 
+  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    switchToDark();
+  } 
+  else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    switchToLight();
+  }
+
+
+
 let darkToggle = document.getElementById('button-dark');
 let lightToggle = document.getElementById('button-light');
 
@@ -34,9 +47,3 @@ let colorToggleButtons = document.querySelectorAll('.color-mode__btn');
 colorToggleButtons.forEach(button => {
   button.addEventListener("click", toggleColorMode);
 });
-
-
-// Check whether the user has set a preference for dark mode and automatically changes color mode
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  switchToDark();
-}

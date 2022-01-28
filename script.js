@@ -1,5 +1,3 @@
-
-
 // Check whether data is filled or empty
 function checkData(data) {
   if ((data == null) || (data == "")) {

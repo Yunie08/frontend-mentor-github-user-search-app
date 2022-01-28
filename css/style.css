@@ -1,5 +1,7 @@
 /* Global Variables valid for both dark and light modes */
 :root {
+  /* color-scheme: light dark; */
+
   --color-highlight-h2: #0079FF;
   --color-button-hover: #60ABFF;
   --color-error: #F74646;
@@ -41,7 +43,6 @@
   
 }
 
-/* Color palette - Light mode */
 :root[color-mode="light"] {
   --color-text-main: #4B6A9B ;
   --color-text-secondary: #34383f ;
@@ -53,7 +54,6 @@
   --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
 
-/* Color palette - Dark mode */
 :root[color-mode="dark"] {
   --color-text-main: #FFFFFF ;
   --color-text-secondary: #FFFFFF ;
@@ -64,18 +64,7 @@
   --color-input: #FFFFFF;
   --shadow: 0px 0px 0px 0px rgba(70, 96, 187, 0);
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text-main: #FFFFFF ;
-    --color-text-secondary: #FFFFFF ;
-    --color-h1-stats: #FFFFFF;
-    --color-background-main: #1E2A47;
-    --color-background-secondary: #141D2F;
-    --color-logo-mode-hover: #90A4D4;
-    --color-input: #FFFFFF;
-    --shadow: 0px 0px 0px 0px rgba(70, 96, 187, 0);
-  }
-}
+
 
 *,
 *::after,
@@ -298,8 +287,8 @@ button {
   display: none;
 }
 
-/********** User infos **********/
 
+/********** User infos **********/
 
 .user-info {
   display: grid;
