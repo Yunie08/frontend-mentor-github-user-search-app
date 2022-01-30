@@ -2,9 +2,9 @@
 :root {
   /* color-scheme: light dark; */
 
-  --color-highlight-h2: #0079FF;
-  --color-button-hover: #60ABFF;
-  --color-error: #F74646;
+  --color-highlight-h2: #0079ff;
+  --color-button-hover: #60abff;
+  --color-error: #f74646;
 
   --border-radius-l: 1.5rem;
   --border-radius-s: 1rem;
@@ -40,38 +40,36 @@
   --line-height-footer: 1.925rem;
 
   --picture-size: 7rem;
-  
 }
 
 :root[color-mode="light"] {
-  --color-text-main: #4B6A9B ;
-  --color-text-secondary: #34383f ;
-  --color-h1-stats: #2B3442;
-  --color-background-main: #FEFEFE;
-  --color-background-secondary: #F6F8FF;
+  --color-text-main: #4b6a9b;
+  --color-text-secondary: #34383f;
+  --color-h1-stats: #2b3442;
+  --color-background-main: #fefefe;
+  --color-background-secondary: #f6f8ff;
   --color-logo-mode-hover: #222731;
   --color-input: #222731;
   --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
 
 :root[color-mode="dark"] {
-  --color-text-main: #FFFFFF ;
-  --color-text-secondary: #FFFFFF ;
-  --color-h1-stats: #FFFFFF;
-  --color-background-main: #1E2A47;
-  --color-background-secondary: #141D2F;
-  --color-logo-mode-hover: #90A4D4;
-  --color-input: #FFFFFF;
+  --color-text-main: #ffffff;
+  --color-text-secondary: #ffffff;
+  --color-h1-stats: #ffffff;
+  --color-background-main: #1e2a47;
+  --color-background-secondary: #141d2f;
+  --color-logo-mode-hover: #90a4d4;
+  --color-input: #ffffff;
   --shadow: 0px 0px 0px 0px rgba(70, 96, 187, 0);
 }
-
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
@@ -86,7 +84,7 @@ body {
   box-sizing: border-box;
   min-height: 100%;
   width: 100%;
-  font-family: 'Space Mono', monospace, Arial;
+  font-family: "Space Mono", monospace, Arial;
   display: flex;
   justify-content: center;
   color: var(--color-text-main);
@@ -156,7 +154,7 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.2rem;
-  height: 3.8rem
+  height: 3.8rem;
 }
 
 .header__logo {
@@ -189,17 +187,17 @@ button {
 }
 
 .color-mode__btn:hover {
-
   color: var(--color-logo-mode-hover);
 }
 
 .color-mode__btn:hover .color-mode__icon--dark {
-  filter: brightness(0) invert(12%) sepia(9%) saturate(1513%) hue-rotate(182deg) brightness(92%) contrast(91%);
+  filter: brightness(0) invert(12%) sepia(9%) saturate(1513%) hue-rotate(182deg)
+    brightness(92%) contrast(91%);
 }
 
 .color-mode__btn:hover .color-mode__icon--light {
-
-  filter: brightness(0) invert(88%) sepia(23%) saturate(5933%) hue-rotate(187deg) brightness(91%) contrast(80%);
+  filter: brightness(0) invert(88%) sepia(23%) saturate(5933%)
+    hue-rotate(187deg) brightness(91%) contrast(80%);
 }
 
 /********** Search bar **********/
@@ -256,7 +254,7 @@ button {
   min-width: 8.4rem;
   border-radius: var(--border-radius-s);
   background: var(--color-highlight-h2);
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   font-size: var(--font-size-button);
   line-height: var(--line-height-button);
@@ -294,12 +292,11 @@ button {
   display: none;
 }
 
-
 /********** User infos **********/
 
 .user-info {
   display: grid;
-  grid-template-columns: min-content auto ;
+  grid-template-columns: min-content auto;
   column-gap: 1.9rem;
   row-gap: 3.3rem;
   padding: 3.2rem 2.4rem 4.8rem 2.4rem;
@@ -319,7 +316,6 @@ button {
   margin-top: 0.6rem;
   font-size: var(--font-size-date);
   line-height: var(--line-height-date);
-
 }
 
 .user-info__main {
@@ -390,33 +386,31 @@ a:hover {
   opacity: 0.5;
 }
 
-
-
 /***** Media queries *****/
 @media screen and (min-width: 768px) {
-  :root{
+  :root {
     --font-size-input: 1.8rem;
-  
+
     --font-size-button: 1.6rem;
     --line-height-button: 2.4rem;
-  
+
     --font-size-h1: 2.6rem;
     --line-height-h1: 3.9rem;
-  
+
     --font-size-h2: 1.6rem;
     --line-height-h2: 2.4rem;
-  
+
     --font-size-h3: 1.3rem;
     --line-height-h3: 1.9rem;
-  
+
     --font-size-date: 1.5rem;
     --line-height-date: 2.2rem;
-  
+
     --font-size-description: 1.5rem;
-  
+
     --font-size-data: 2.2rem;
     --line-height-data: 3.3rem;
-  
+
     --font-size-footer: 1.5rem;
     --line-height-footer: 2.2rem;
 
@@ -498,7 +492,6 @@ a:hover {
 }
 
 @media screen and (min-width: 992px) {
-
   .container {
     max-width: 73rem;
     margin: 3rem 0 6rem 0;
@@ -510,7 +503,7 @@ a:hover {
   }
   .user-info__img {
     grid-column: 1;
-    grid-row: 1 /span 2;
+    grid-row: 1 / span 2;
   }
 
   .user-info__header {

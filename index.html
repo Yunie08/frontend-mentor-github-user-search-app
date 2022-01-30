@@ -1,120 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Frontend Mentor | GitHub user search app</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-     
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
         <p class="header__logo">devfinder</p>
 
         <!-- Light mode button -->
-        <button class="color-mode__btn color-mode__btn--light" id="button-light" aria-label="Toggle light mode">Light
-          <img class="color-mode__icon color-mode__icon--light"  src="./assets/icon-sun.svg" alt="Sun" aria-hidden="true"/>
+        <button
+          class="color-mode__btn color-mode__btn--light"
+          id="button-light"
+          aria-label="Toggle light mode"
+        >
+          Light
+          <img
+            class="color-mode__icon color-mode__icon--light"
+            src="./assets/icon-sun.svg"
+            alt="Sun"
+            aria-hidden="true"
+          />
         </button>
 
         <!-- Dark mode button -->
-        <button class="color-mode__btn color-mode__btn--dark" id="button-dark" aria-label="Toggle dark mode">Dark
-          <img class=" color-mode__icon color-mode__icon--dark" src="./assets/icon-moon.svg" alt="Moon" aria-hidden="true"/>
+        <button
+          class="color-mode__btn color-mode__btn--dark"
+          id="button-dark"
+          aria-label="Toggle dark mode"
+        >
+          Dark
+          <img
+            class="color-mode__icon color-mode__icon--dark"
+            src="./assets/icon-moon.svg"
+            alt="Moon"
+            aria-hidden="true"
+          />
         </button>
-    </header>
+      </header>
 
-    <main class="user-search-app">
-      <!-- Searchbar -->
+      <main class="user-search-app">
+        <!-- Searchbar -->
 
-      <form class="search-bar" id="form" autocomplete="off">
-        <img class='search-bar__icon' src="./assets/icon-search.svg" alt="Search icon">
-        <label class="sr-only" for="gitUsername">Search GitHub username</label>
-        <input type="text" class="search-bar__input" name="gitUsername" id="gitUsername" spellcheck="false" placeholder="Search GitHub username...">
-        <div class="error hidden">No results</div>
-        <button class="search-bar__button" type="submit" id="submit">Search</button>
-      </form>
+        <form class="search-bar" id="form" autocomplete="off">
+          <img
+            class="search-bar__icon"
+            src="./assets/icon-search.svg"
+            alt="Search icon"
+          />
+          <label class="sr-only" for="gitUsername"
+            >Search GitHub username</label
+          >
+          <input
+            type="text"
+            class="search-bar__input"
+            name="gitUsername"
+            id="gitUsername"
+            spellcheck="false"
+            placeholder="Search GitHub username..."
+          />
+          <div class="error hidden">No results</div>
+          <button class="search-bar__button" type="submit" id="submit">
+            Search
+          </button>
+        </form>
 
+        <!-- User infos -->
 
+        <section class="user-info">
+          <img
+            id="userPic"
+            class="user-info__img"
+            src="./assets/emptypic.png"
+            alt="Profile picture"
+          />
 
-      <!-- User infos -->
-
-      <section class="user-info">
-        <img id="userPic" class="user-info__img" src="./assets/emptypic.png" alt="Profile picture">
-
-        <!-- User infos - header -->
-        <div class="user-info__header">
-          <div class="user-info__id">
-            <h1 class="user-info__name">The Octocat</h1>
-            <h2 class="user-info__pseudo">@octocat</h2>
-          </div>
-          <p class="user-info__date">Joined<span id="date"></span></p>
-        </div>
-
-        <!-- User infos - details -->
-        <div class="user-info__main">
-
-          <!-- User infos - details - description -->
-          <p class="user-info__description"></p>
-
-          <!-- User infos - details - statistics -->
-          <div class="user-info__stats">
-            <div class="user-info__stats__item">
-              <h3 class="user-info__stats__title">Repos</h3>
-              <p class="user-info__stats__data" id="repos"></p>
+          <!-- User infos - header -->
+          <div class="user-info__header">
+            <div class="user-info__id">
+              <h1 class="user-info__name">The Octocat</h1>
+              <h2 class="user-info__pseudo">@octocat</h2>
             </div>
-
-            <div class="user-info__stats__item">
-              <h3 class="user-info__stats__title">Followers</h3>
-              <p class="user-info__stats__data" id="followers"></p>
-            </div>
-            <div class="user-info__stats__item">
-              <h3 class="user-info__stats__title">Following</h3>
-              <p class="user-info__stats__data" id="following"></p>
-            </div>
+            <p class="user-info__date">Joined<span id="date"></span></p>
           </div>
 
-          <!-- User infos - details - Location & links-->
-          <div class="user-infos__links">
+          <!-- User infos - details -->
+          <div class="user-info__main">
+            <!-- User infos - details - description -->
+            <p class="user-info__description"></p>
 
-            <div class="user-infos__links__item" id="locationContainer">
-              <img class="user-infos__links__icon" src="./assets/icon-location.svg" alt="Location icon">
-              <p class="user-infos__links__text" id="location"></p>
+            <!-- User infos - details - statistics -->
+            <div class="user-info__stats">
+              <div class="user-info__stats__item">
+                <h3 class="user-info__stats__title">Repos</h3>
+                <p class="user-info__stats__data" id="repos"></p>
+              </div>
+
+              <div class="user-info__stats__item">
+                <h3 class="user-info__stats__title">Followers</h3>
+                <p class="user-info__stats__data" id="followers"></p>
+              </div>
+              <div class="user-info__stats__item">
+                <h3 class="user-info__stats__title">Following</h3>
+                <p class="user-info__stats__data" id="following"></p>
+              </div>
             </div>
 
-            <div class="user-infos__links__item" id="websiteContainer">
-              <img class="user-infos__links__icon" src="./assets/icon-website.svg" alt="Link icon">
-              <!-- <a class="user-infos__links__text" aria-label="Link to user website" href="http://github.blog" id="website">http://github.blog</a> -->
-            </div>
+            <!-- User infos - details - Location & links-->
+            <div class="user-infos__links">
+              <div class="user-infos__links__item" id="locationContainer">
+                <img
+                  class="user-infos__links__icon"
+                  src="./assets/icon-location.svg"
+                  alt="Location icon"
+                />
+                <p class="user-infos__links__text" id="location"></p>
+              </div>
 
-            <div class="user-infos__links__item" id="twitterContainer">
-              <img class="user-infos__links__icon" src="./assets/icon-twitter.svg" alt="Twitter logo">
-              <!-- <p class="user-infos__links__text" aria-label="Link to user's Twitter" id="twitter">Not available</p> -->
+              <div class="user-infos__links__item" id="websiteContainer">
+                <img
+                  class="user-infos__links__icon"
+                  src="./assets/icon-website.svg"
+                  alt="Link icon"
+                />
+                <!-- <a class="user-infos__links__text" aria-label="Link to user website" href="http://github.blog" id="website">http://github.blog</a> -->
+              </div>
+
+              <div class="user-infos__links__item" id="twitterContainer">
+                <img
+                  class="user-infos__links__icon"
+                  src="./assets/icon-twitter.svg"
+                  alt="Twitter logo"
+                />
+                <!-- <p class="user-infos__links__text" aria-label="Link to user's Twitter" id="twitter">Not available</p> -->
+              </div>
+
+              <div class="user-infos__links__item" id="companyContainer">
+                <img
+                  class="user-infos__links__icon"
+                  src="./assets//icon-company.svg"
+                  alt="Company icon"
+                />
+                <!-- <a class="user-infos__links__text" aria-label="Link to user company's website" href="http://github.blog" id="company">@github</a> -->
+              </div>
             </div>
-                      
-            <div class="user-infos__links__item" id="companyContainer">
-              <img class="user-infos__links__icon" src="./assets//icon-company.svg" alt="Company icon">
-              <!-- <a class="user-infos__links__text" aria-label="Link to user company's website" href="http://github.blog" id="company">@github</a> -->
-            </div>
-          
           </div>
+        </section>
+      </main>
+    </div>
 
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <!-- Javascript -->
-  <script src="./javascript/colorMode.js"></script>
-  <script src="./javascript/script.js"></script>
-
-</body>
+    <!-- Javascript -->
+    <script src="./javascript/colorMode.js"></script>
+    <script src="./javascript/script.js"></script>
+  </body>
 </html>
