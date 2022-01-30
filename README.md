@@ -55,14 +55,15 @@ Users should be able to:
 
 - How to implement a dark mode
 - How to have the correct color scheme chosen for the user based on their computer preferences
-- Thi project also allowed me to gain more experience with fetch APIs.
+- This project also allowed me to gain more experience with fetching APIs.
 
 
 ### Continued development
 
 - __Improvement on this project:__
+  - Currently working on implementing a cleaner solution for dark mode 
   - I would like to implement a delayed rendering of the page until API fetch is done
-  - Add backup values for in case variables are not correctly loading
+  - Add backup values in case variables are not correctly loaded
 
 
 ### Useful resources
